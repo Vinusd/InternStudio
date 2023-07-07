@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html"><i class="fas fa-map-marked-alt"></i></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav" id="nav-list">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="product.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="category.html">Category</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">Profile</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More options
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="nav-drop">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn btn-outline-light my-2 my-sm-0" id="btn" type="submit">Search</button>
+                </form>
+                <div class="cart p-3">
+                    <a href="#">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger text-dark" id="cart-text">24</span>
+                    </a>
+                </div>
+              </nav>
+        </div>
+      </section>
+      <!--Cart-->
+      <section class="cart py-5 my-5" id="cart">
+        <div class="container" id="cart-section">
+            <div class="section_title text-center mb-5">
+                <h1 class="text-capitalize">Cart</h1>
+            </div>
+            <div class="row bg_cart_1 rounded">
+                <!--Grid column-->
+                <div class="col-md-8 border-right">
+                    <!-- Card -->
+                    <div class="mb-3">
+                        <div class="pt-4">
+                            <h5 class="mb-4">Cart (<span>3</span> items)</h5>
+                            <div class="row mb-4">
+                                <div class="col-md-5 col-lg-3 col-xl-3">
+                                    <div class="rounded mb-3 mb-md-0">
+                                        <img class="img-fluid w-100 rounded shadow" src="accessories/cart1.jpg"
+                                            alt="Sample">
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-lg-9 col-xl-9">
+                                    <div>
+                                        <div class="d-flex justify-content-between">
+                                            <div id="order-text">
+                                                <h5> Apple Iphone 14 Pro Max</h5>
+                                                <p class="mb-2 text-uppercase small">product - mobile</p>
+                                                <p class="mb-2  text-uppercase small">Color: Star light</p>
+                                                <p class="mb-2 text-uppercase small" >variant - Pro Max</p>
+                                            </div>
+                                            <div>
+                                                <div class="mb-0 w-100">
+                                                    <button
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                                        class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-minus"></i>
+                                                    </button>
+                                                    <input class="quantity text-center" min="0" max="10" name="quantity"
+                                                        value="1" type="number">
+                                                    <button
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                        class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-plus"></i>
+                                                    </button>
+                                                </div>
+                                                <small class="form-text text-muted text-center">
+                                                    (Note, 1 piece)
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <a href="javascript:;" type="button"
+                                                    class="small text-uppercase mr-3"><i
+                                                        class="fas fa-trash-alt mr-1"></i> Remove item </a>
+                                            </div>
+                                            <p class="mb-0"><span><strong id="summary">₹1,39,900.00</strong></span></p
+                                                class="mb-0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="mb-4">
+                            <div class="row mb-4">
+                                <div class="col-md-5 col-lg-3 col-xl-3">
+                                    <div class="rounded mb-3 mb-md-0">
+                                        <img class="img-fluid w-100 rounded shadow" src="accessories/cart2.jpg"
+                                            alt="Sample">
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-lg-9 col-xl-9">
+                                    <div>
+                                        <div class="d-flex justify-content-between">
+                                            <div id="order-text">
+                                                <h5>Lenovo Legion pro 5</h5>
+                                                <p class="mb-2 text-uppercase small">product - Laptop </p>
+                                                <p class="mb-2 text-uppercase small">Color: strom grey</p>
+                                                <p class="mb-2 text-uppercase small">variant - rygen 7 16TUGBh7H</p>
+                                            </div>
+                                            <div>
+                                                <div class="mb-0 w-100">
+                                                    <button
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                                        class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-minus"></i>
+                                                    </button>
+                                                    <input class="quantity text-center" min="0" max="10" name="quantity"
+                                                        value="1" type="number">
+                                                    <button
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                        class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <a href="javascript:;" type="button"
+                                                    class="card-link-secondary small text-uppercase mr-3">
+                                                    <i class="fas fa-trash-alt mr-1"></i> Remove item
+                                                </a>
+                                            </div>
+                                            <p class="mb-0"><span><strong>₹1,92,900.00</strong></span></p class="mb-0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="mb-4">
+                            <div class="row mb-4">
+                                <div class="col-md-5 col-lg-3 col-xl-3">
+                                    <div class="rounded mb-3 mb-md-0">
+                                        <img class="img-fluid w-100 rounded shadow" src="accessories/cart3.jpg"
+                                            alt="Sample">
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-lg-9 col-xl-9">
+                                    <div>
+                                        <div class="d-flex justify-content-between">
+                                            <div id="order-text">
+                                                <h5>Skullcandy Hesh ANC Wireless Headphones</h5>
+                                                <p class="mb-2 text-uppercase small">product - Headphone </p>
+                                                <p class="mb-2 text-uppercase small">Color: Black</p>
+                                                <p class="mb-2 text-uppercase small">variant - Hesh ANC black</p>
+                                            </div>
+                                            <div>
+                                                <div class="mb-0 w-100">
+                                                    <button
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                                        class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-minus"></i>
+                                                    </button>
+                                                    <input class="quantity text-center" min="0" max="10" name="quantity"
+                                                        value="1" type="number">
+                                                    <button
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                        class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <a href="javascript:;" type="button"
+                                                    class="card-link-secondary small text-uppercase mr-3">
+                                                    <i class="fas fa-trash-alt mr-1"></i> Remove item
+                                                </a>
+                                            </div>
+                                            <p class="mb-0"><span><strong>₹8,999.00</strong></span></p class="mb-0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-4 rounded">
+                    <!-- Card -->
+                    <div class="mb-3">
+                        <div class="pt-4 p-2" id="order-summary">
+                            <h5 class="mb-3 text-center">Order summary</h5>
+                            <ul class="list-group list-group-flush">
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-2 p-2" id="list-color">
+                                    <span>Apple Iphone 14 Pro Max</span>
+                                    <span>x1</span>
+                                    <span>₹1,39,900.00</span>
+                                </li>
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-2 p-2" id="list-color">
+                                    <span>Lenovo Legion Pro 5</span>
+                                    <span>x1</span>
+                                    <span>₹1,92,900.00</span>
+                                </li>
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-2 p-2" id="list-color">
+                                    <span>Skullcandy Headphones</span>
+                                    <span>x1</span>
+                                    <span>₹8,999.00</span>
+                                </li>
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-top px-0 mb-3 p-2" id="list-color">
+                                    <div>
+                                        <strong>Total amount</strong>
+                                        <strong>
+                                            <p class="mb-0">(including VAT)</p>
+                                        </strong>
+                                    </div>
+                                    <span><strong>₹3,41,799</strong></span>
+                                </li>
+                            </ul>
+                            <a href="checkout.html" class="btn btn-primary btn-block" id="checkout">Go to Checkout</a>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+                <!--Grid column-->
+            </div>
+        </div>
+    </section>
+        <!--footer-->
+        <section class="footer_section pt-5 pb-2">
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <div class="footer_title">
+                                <a class="footer-brand" href="index.html"><i class="fas fa-map-marked-alt"></i></a>
+                            </div>
+                            <div class="footer_links">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iusto labore aut at? Alias, laudantium officiis facere neque repellendus ratione.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="footer_title">
+                                <h2>Quick links</h2>
+                            </div>
+                            <div class="footer_links">
+                                <ul id="list">
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="about.html">Features</a></li>
+                                    <li><a href="product.html">Products</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="about.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="footer_title">
+                                <h2>New Products</h2>
+                            </div>
+                            <div class="footer_links">
+                                <ul id="list">
+                                    <li><a href="about.html">Mens Accessories</a></li>
+                                    <li><a href="about.html">Fashion</a></li>
+                                    <li><a href="about.html">Kids <Section></Section></a></li>
+                                    <li><a href="about.html">Electronics</a></li>
+                                    <li><a href="about.html">Groceries</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="footer_title">
+                                <h2>Support</h2>
+                            </div>
+                            <div class="footer_links">
+                                <ul id="list">
+                                    <li><a href="about.html">Frequently Asked Questions</a></li>
+                                    <li><a href="about.html">Terms and Conditions</a></li>
+                                    <li><a href="about.html">Report an Issue</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-top">
+                    <h6 class="text-center mt-3">
+                        Copyright @2023 All rights reserved
+                    </h6>
+                </div>
+            </footer>
+        </section>
+        <div class="backtop" id="backtop">
+            <a href="#top" id="button" class="btn btn-lg btn-floating btn-outline-danger" role="button">
+                <i class="fas fa-chevron-up text-dark"></i>
+            </a>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+</body>
+</html>
